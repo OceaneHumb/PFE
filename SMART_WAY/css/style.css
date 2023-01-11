@@ -1,0 +1,249 @@
+/***********************/
+/*** menu navigation ***/
+/***********************/
+.logo {
+    float: left;
+    height: 220px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  header img {
+    padding: 0px 5px 0px 50px;
+  }
+  nav {
+    padding: 75px 60px 0px 0px;
+  }
+  nav li {
+    list-style-type: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: block;
+    float: left;
+    text-align: center;
+  }
+  nav ul {
+    margin: 0px;
+    float: right;
+  }
+  .menu {
+    font-weight: bold;
+    display: block;
+    padding: 0px 60px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-decoration: none;
+  }
+  .menu:hover, .menusand:hover {
+    color: rgb(16 144 72)
+  }
+  header {
+    border-radius: 4px 4px 0px 0px;
+    height: 250px;
+    width: 100%;
+  }
+  @media(max-width: 800px) {
+    .logo, nav {
+      font-size: 0.7em;
+    }
+    header {
+      height: 50px;
+    }
+  }
+  @media(max-width: 500px) {
+    .logo, nav {
+      font-size: 0.6em;
+    }
+    header {
+      height: 50px;
+    }
+  }
+
+/**************/
+/*** footer ***/
+/**************/
+  footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 0px 0px 4px 4px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media(max-width: 800px) {
+    footer {
+     font-size: 0.8em;
+    }
+  }
+
+/*********************************/
+/*** Commun à toutes les pages ***/
+/*********************************/
+.entete h1 {
+  margin-top: 0px;
+    margin-bottom: 50px;
+}
+body {
+    text-align: center;
+    margin: 0px;
+}
+
+/********************/
+/*** Page ACCUEIL ***/
+/********************/
+.illustration {
+  margin-left: 0px;
+}
+.illustration img {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 450px;
+}
+.damier {
+  float: center;
+}
+.presentation p {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.presentation div {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.presentation div li {
+  margin-left: 30px;
+}
+.obj {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.bas {
+  margin-top: 0px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+/****************************/
+/*** Page RUES AUX ECOLES ***/
+/****************************/
+.champ {
+  border-radius: 5px 0px 0px 5px;
+  border-color: black;
+  border-width: 1px;
+  width: 250px;
+  height: 19px;
+  float:left;
+}
+.select {
+  border-radius: 0px 5px 5px 0px;
+  border-color: black;
+  margin-left: 0px;
+  border-width: 0.5px;
+  color: white;
+  background-color: black;
+  width: 75px;
+  padding: 3px;
+}
+.select:hover {
+  color: white;
+  background-color: rgb(0 166 81);
+}
+.corps h2 {
+  margin-left: 200px;
+  float: left;
+}
+.selection {
+  text-align: left;
+  margin-top:73px;
+  margin-bottom: 50px;
+  margin-left: 500px;
+}
+.ecole {
+  text-align: left;
+  margin-left: 200px;
+}
+iframe {
+  float: left;
+  margin-left: 200px;
+  margin-right: 50px;
+}
+.rue {
+  float: left;
+  padding-top: 75px;
+  margin-left: 5px;
+  margin-right: 325px;
+}
+.validation {
+  width: 60px;
+  float: left;
+}
+.check {
+  color: green;
+  float: left;
+  height: 40px;
+  padding-top: 25px;
+  margin-left: 5px;
+  margin-right: 170px;
+}
+.croix {
+  color: red;
+  float: left;
+  height: 40px;
+  padding-top: 25px;
+  margin-left: 5px;
+  margin-right: 110px;
+}
+.resultat {
+  text-align: left;
+  margin-top: 500px;
+  margin-left: 200px;
+}
+.resultat div p {
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+  margin-top: 10px;
+}
+.resultat img {
+  width: 60px;
+  margin-left: 20px;
+}
+.contenu {
+  font-size: 20px;
+}
+.rouge {
+  color: red;
+}
+/*****************************/
+/*** Page ILOTS DE CHALEUR ***/
+/*****************************/ 
+.classement {
+  font-size: 20px;
+  margin-left: 400px;
+  margin-right: 200px;
+  text-align: left;
+}
+.classement h2 {
+  margin-bottom: 20px;
+}
+.classement li {
+  list-style-type: none;
+}
+/*********************/
+/*** Page A PROPOS ***/
+/*********************/ 
+.intro {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 200px;
+  margin-right: 200px;
+}

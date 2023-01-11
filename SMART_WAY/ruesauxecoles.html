@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Page d'accueil">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="Louis-Gabriel Eon">
+        <link rel="icon" type="image/png" href="img/logo.png">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="js/borne.js" defer></script>
+        <title>Smart Way</title>
+    </head>
+
+    <body>
+
+        <header>
+            <a href="accueil.html" class="logo"><img class="logo" src="img/logo.png"></a>
+            <nav>
+                <ul>
+                    <li class="main-menu"><a class="menu" href="accueil.html">ACCUEIL</a></li>
+                    <li class="main-menu"><a class="menu" href="ruesauxecoles.html">RUES AUX ECOLES</a></li>
+                    <li class="main-menu"><a class="menu" href="ilotsdechaleur.html">ILOTS DE CHALEUR</a></li>
+                    <li class="main-menu"><a class="menu" href="apropos.html">A PROPOS</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="entete">
+            <h1>Validation des critères du projet</br>"Rues des écoles"</h1>
+        </div>
+
+        <div class="corps">
+        <h2>Sélectionner l'école voulue :</h2>
+        <div class="selection">
+            <input class="champ" type="'text" id="lieu" placeholder="Renseignez l'école ciblée">
+            <button class="select" id="boutton">Valider</button>
+        </div>
+
+        <div class="contenu">
+        <h3 class="ecole">Ecole primaire Renauld :</h3>
+
+        <div class="caracteristique">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.8633656804345!2d2.290869515175063!3d48.8798812071481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f93001141a7%3A0xabed67681c145cfc!2sRue%20Marcel%20Renault%2C%2075017%20Paris!5e0!3m2!1sfr!2sfr!4v1673348570844!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="output"></div>
+                <img class="validation" src="img/check.png"><div class="check">Pas un axe principal de Paris</div>
+                <img class="validation" src="img/croix.png"><div class="croix">Pas de bornes électrique pour voitures</div>
+                <img class="validation" src="img/check.png"><div class="check">Pas utilisée par la RATP</div>
+        </div>
+
+        <div class="resultat">
+            <p>Cette école ne remplit pas encore tous les critères pour pouvoir faire partie du projet "Rues aux écoles".</p>
+
+            <div><p class="rouge">Ecole Primaire Renauld : pas éligible</p><img class="conclusion" src="img/croix.png"></div>
+        </div>
+        </div>
+
+        </div>
+
+        <footer>
+            &copy; 
+                Gauthier BOUVIER, Charlotte BRASSEUR, Anatole CLAUDIN,</br>
+                Louis-Gabriel EON, Nina ESPAGNON, Océane HUMBERT 2023
+        </footer>
+
+    </body>
+
+</html>
