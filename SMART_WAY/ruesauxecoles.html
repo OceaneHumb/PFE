@@ -4,19 +4,23 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Page d'accueil">
-        <meta name="keywords" content="HTML,CSS,JavaScript">
-        <meta name="author" content="Louis-Gabriel Eon">
+        <meta name="description" content="Page à propos">
+        <meta name="keywords" content="mobilité,Paris,écoles,HTML,CSS,JavaScript">
+        <meta name="author" content="Groupe Smart Way">
         <link rel="icon" type="image/png" href="img/logo.png">
         <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="js/boutonrecherche.js" defer></script>
         <script src="js/borne.js" defer></script>
         <title>Smart Way</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+            integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+            crossorigin="" />
     </head>
 
     <body>
 
         <header>
-            <a href="accueil.html" class="logo"><img class="logo" src="img/logo.png"></a>
+            <a href="accueil.html" class="logo"><img class="logo" src="img/logo.png" alt="Logo Smart Way"></a>
             <nav>
                 <ul>
                     <li class="main-menu"><a class="menu" href="accueil.html">ACCUEIL</a></li>
@@ -26,43 +30,64 @@
                 </ul>
             </nav>
         </header>
-        
-        <div class="entete">
+
+        <button id="up"><img src="img/fleche.jpg" height="35px" width="35px"></button>
+
+        <div class="titre">
             <h1>Validation des critères du projet</br>"Rues des écoles"</h1>
         </div>
 
         <div class="corps">
-        <h2>Sélectionner l'école voulue :</h2>
-        <div class="selection">
-            <input class="champ" type="'text" id="lieu" placeholder="Renseignez l'école ciblée">
-            <button class="select" id="boutton">Valider</button>
-        </div>
 
-        <div class="contenu">
-        <h3 class="ecole">Ecole primaire Renauld :</h3>
+            <h2>Sélectionner la rue de l'école :</h2>
 
-        <div class="caracteristique">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.8633656804345!2d2.290869515175063!3d48.8798812071481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f93001141a7%3A0xabed67681c145cfc!2sRue%20Marcel%20Renault%2C%2075017%20Paris!5e0!3m2!1sfr!2sfr!4v1673348570844!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div id="output"></div>
-                <img class="validation" src="img/check.png"><div class="check">Pas un axe principal de Paris</div>
-                <img class="validation" src="img/croix.png"><div class="croix">Pas de bornes électrique pour voitures</div>
-                <img class="validation" src="img/check.png"><div class="check">Pas utilisée par la RATP</div>
-        </div>
+            <div class="selection">
+                <input class="champ" type="'text" id="lieu" placeholder="Renseignez la rue de l'école ciblée">
+                <button class="select" id="boutton"><img src="img/loupe.png" width="30px"></button>
+            </div>
 
-        <div class="resultat">
-            <p>Cette école ne remplit pas encore tous les critères pour pouvoir faire partie du projet "Rues aux écoles".</p>
+            <div class="contenu">
 
-            <div><p class="rouge">Ecole Primaire Renauld : pas éligible</p><img class="conclusion" src="img/croix.png"></div>
-        </div>
-        </div>
+                <div class="caracteristique">
 
-        </div>
+                    <div class="conteneur">
+                        <div id="map" class="map"><!-- la carte d'affiche ici --></div>
+                    </div>
 
-        <footer>
-            &copy; 
+                    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+                        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+                        crossorigin="">
+                    </script>
+
+                    <script type="text/JavaScript">
+                        // On initialise la latitude et la longitude de Paris (centre de la carte)
+                        var lat = 48.852969;
+                        var lon = 2.349903;
+                        var macarte = null;
+                        // Fonction d'initialisation de la carte
+
+                        // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+                        macarte = L.map('map').setView([lat, lon], 11);
+                        // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+                        L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                            // Il est toujours bien de laisser le lien vers la source des données
+                            attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                            minZoom: 1,
+                            maxZoom: 20
+                        }).addTo(macarte);
+                    </script>
+
+                    <div id="output"></div>
+
+                </div>
+
+            <div id="resultat" class="resultat"></div>
+
+            <footer>
+                &copy;
                 Gauthier BOUVIER, Charlotte BRASSEUR, Anatole CLAUDIN,</br>
                 Louis-Gabriel EON, Nina ESPAGNON, Océane HUMBERT 2023
-        </footer>
+            </footer>
 
     </body>
 
