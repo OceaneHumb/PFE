@@ -75,17 +75,5 @@ function borne(lieurecherche){
 
     return("ok ");
 
-       /*if (tampLieu!="" && tampLieu!="rue" && tampLieu!="boulevard") {
-        fetch("https://opendata.paris.fr/api/records/1.0/search/?dataset=adresse_paris&q=" + lieu.value + "&rows=1")
-        .then(reponse => reponse.json())
-        .then(data => { 
-            const longitude = data.records[0].fields.geom_x_y[0];
-            const latitude = data.records[0].fields.geom_x_y[1];
-            
-            var marqueur = L.marker([longitude, latitude]).addTo(macarte);
-            macarte.setView([longitude, latitude], 18);
-        })
-    }*/
-
 }
 

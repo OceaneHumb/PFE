@@ -10,7 +10,10 @@
         <link rel="icon" type="image/png" href="img/logo.png">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="js/boutonrecherche.js" defer></script>
+        <script src="js/criteres.js" defer></script>
+        <script src="js/carte.js" defer></script>
         <script src="js/borne.js" defer></script>
+        <script src="js/axe.js" defer></script>
         <title>Smart Way</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
             integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -43,7 +46,7 @@
 
             <div class="selection">
                 <input class="champ" type="'text" id="lieu" placeholder="Renseignez la rue de l'école ciblée">
-                <button class="select" id="boutton"><img src="img/loupe.png" width="30px"></button>
+                <button class="select" id="boutton" onclick='criteres(lieu.value)'><img src="img/loupe.png" width="30px"></button>
             </div>
 
             <div class="contenu">
@@ -75,6 +78,13 @@
                             minZoom: 1,
                             maxZoom: 20
                         }).addTo(macarte);
+                        // création et ajout du LayerGroup
+                        lgMarkers = new L.LayerGroup();
+                        macarte.addLayer(lgMarkers);
+
+                        function layerRemoveMarkers() {
+                            lgMarkers.clearLayers();
+                        }
                     </script>
 
                     <div id="output"></div>
